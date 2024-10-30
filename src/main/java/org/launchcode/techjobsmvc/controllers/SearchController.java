@@ -23,5 +23,10 @@ public class SearchController {
 
     // TODO #3 - Create a handler to process a search request and render the updated search view.
 
+    @GetMapping(value = "searchTerm")
+    public String displaySearchResults(Model model) {
+        model.addAttribute("columns", columnChoices);
+        return "search";
+    }
 }
 
